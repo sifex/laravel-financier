@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/sifex/stripe-connect.svg?style=flat-square)](https://scrutinizer-ci.com/g/sifex/stripe-connect)
 [![Total Downloads](https://img.shields.io/packagist/dt/sifex/stripe-connect.svg?style=flat-square)](https://packagist.org/packages/sifex/stripe-connect)
 
-This is a library to help run Stripe Connect from within Laravel.
+This is a library to help run Stripe Connect from within Laravel. Currently a work in progress.
 
 ## Installation
 
