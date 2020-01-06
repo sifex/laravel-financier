@@ -1,11 +1,11 @@
-# Very short description of the package
+# Laravel Stripe Connect
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sifex/stripe-connect.svg?style=flat-square)](https://packagist.org/packages/sifex/stripe-connect)
 [![Build Status](https://img.shields.io/travis/sifex/stripe-connect/master.svg?style=flat-square)](https://travis-ci.org/sifex/stripe-connect)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sifex/stripe-connect.svg?style=flat-square)](https://scrutinizer-ci.com/g/sifex/stripe-connect)
 [![Total Downloads](https://img.shields.io/packagist/dt/sifex/stripe-connect.svg?style=flat-square)](https://packagist.org/packages/sifex/stripe-connect)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This is a library to help run Stripe Connect from within Laravel.
 
 ## Installation
 
@@ -18,7 +18,7 @@ composer require sifex/stripe-connect
 ## Usage
 
 ``` php
-// Usage description here
+
 ```
 
 ### Testing
@@ -47,7 +47,3 @@ If you discover any security related issues, please email alex@platformapp.io in
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
