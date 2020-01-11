@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/sifex/laravel-financier.svg?style=flat-square)](https://scrutinizer-ci.com/g/sifex/laravel-financier)
 [![Total Downloads](https://img.shields.io/packagist/dt/sifex/laravel-financier.svg?style=flat-square)](https://packagist.org/packages/sifex/laravel-financier)
 
-This is a Laravel library for [Financier](https://github.com/sifex/financier) – an interface for platform-based payment gateways such as Stripe Connect.
+This is a Laravel library for [Financier](https://github.com/sifex/financier) – an interface for marketplace-based payment gateways such as Stripe Connect.
 
 ## Installation
 
