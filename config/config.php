@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Auth\User;
-use Sifex\StripeConnect\Interfaces\ConnectAccount;
+use Sifex\LaravelFinancier\Interfaces\ConnectAccount;
 
 return [
     /**

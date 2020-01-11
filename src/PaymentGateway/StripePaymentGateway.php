@@ -1,12 +1,12 @@
 <?php
 
-namespace Sifex\StripeConnect\PaymentGateway;
+namespace Sifex\LaravelFinancier\PaymentGateway;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Sifex\StripeConnect\Interfaces\ConnectAccount;
+use Sifex\LaravelFinancier\Interfaces\ConnectAccount;
 use Stripe\Account;
 use Stripe\Balance;
 use Stripe\Customer;
@@ -116,7 +116,7 @@ class StripePaymentGateway implements PaymentGateway
     public function getCustomer(User $customer): Collection
     {
         $customer = Customer::retrieve(
-            $customer->{config('stripe-connect.user_customer_attribute'},
+            $customer->{config('laravel-financier.user_customer_attribute'},
             ['stripe_account' => $this->organisationAccountID]
         );
 
@@ -132,7 +132,7 @@ class StripePaymentGateway implements PaymentGateway
     public function setCustomerDefaultPaymentMethod(User $customer, string $token): Collection
     {
         $card = Customer::createSource(
-            $customer->{config('stripe-connect.user_customer_attribute'},
+            $customer->{config('laravel-financier.user_customer_attribute'},
             ['source' => $token],
             ['stripe_account' => $this->organisationAccountID]
         );
@@ -152,7 +152,7 @@ class StripePaymentGateway implements PaymentGateway
         $user = $customer->user;
 
         $customer = Customer::update(
-            $customer->{config('stripe-connect.user_customer_attribute'},
+            $customer->{config('laravel-financier.user_customer_attribute'},
             [
                 'email' => $user->email,
                 'name' => $user->first_name.' '.$user->last_name,
@@ -285,7 +285,7 @@ class StripePaymentGateway implements PaymentGateway
     public function createSubscription(User $customer, MembershipType $membershipType): Collection
     {
         $subscription = Subscription::create([
-            'customer' => $customer->{config('stripe-connect.user_customer_attribute'},
+            'customer' => $customer->{config('laravel-financier.user_customer_attribute'},
             'items' => [
                 [
                     'plan' => $membershipType->payment_gateway_plan_id,
@@ -471,7 +471,7 @@ class StripePaymentGateway implements PaymentGateway
     public function getCustomerPaymentMethods(User $customer): Collection
     {
         $customer = Customer::retrieve(
-            $customer->{config('stripe-connect.user_customer_attribute'},
+            $customer->{config('laravel-financier.user_customer_attribute'},
             ['stripe_account' => $this->organisationAccountID]
         );
 
@@ -487,7 +487,7 @@ class StripePaymentGateway implements PaymentGateway
     public function removeCustomerPaymentMethod(User $customer, string $paymentSourceID): Collection
     {
         $deletedSource = Customer::deleteSource(
-            $customer->{config('stripe-connect.user_customer_attribute'},
+            $customer->{config('laravel-financier.user_customer_attribute'},
             $paymentSourceID,
             [],
             ['stripe_account' => $this->organisationAccountID]
@@ -519,7 +519,7 @@ class StripePaymentGateway implements PaymentGateway
     public function getInvoices(User $customer): Collection
     {
         $invoices = Invoice::all(
-            ['customer' => $customer->{config('stripe-connect.user_customer_attribute'}],
+            ['customer' => $customer->{config('laravel-financier.user_customer_attribute'}],
             ['stripe_account' => $this->organisationAccountID]
         );
 

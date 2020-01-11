@@ -1,13 +1,13 @@
 <?php
 
-namespace Sifex\StripeConnect;
+namespace Sifex\LaravelFinancier;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Sifex\StripeConnect\Skeleton\SkeletonClass
+ * @see \Sifex\LaravelFinancier\Skeleton\SkeletonClass
  */
-class StripeConnectFacade extends Facade
+class LaravelFinancierFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class StripeConnectFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'stripe-connect';
+        return 'laravel-financier';
     }
 }

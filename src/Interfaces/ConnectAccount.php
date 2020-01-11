@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sifex\StripeConnect\Interfaces;
+namespace Sifex\LaravelFinancier\Interfaces;
 
 
 interface ConnectAccount

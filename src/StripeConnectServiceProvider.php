@@ -1,10 +1,10 @@
 <?php
 
-namespace Sifex\StripeConnect;
+namespace Sifex\LaravelFinancier;
 
 use Illuminate\Support\ServiceProvider;
 
-class StripeConnectServiceProvider extends ServiceProvider
+class LaravelFinancierServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -14,29 +14,29 @@ class StripeConnectServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'stripe-connect');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'stripe-connect');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-financier');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-financier');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('stripe-connect.php'),
+                __DIR__.'/../config/config.php' => config_path('laravel-financier.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/stripe-connect'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-financier'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/stripe-connect'),
+                __DIR__.'/../resources/assets' => public_path('vendor/laravel-financier'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/stripe-connect'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-financier'),
             ], 'lang');*/
 
             // Registering package commands.
@@ -50,11 +50,11 @@ class StripeConnectServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'stripe-connect');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-financier');
 
         // Register the main class to use with the facade
-        $this->app->singleton('stripe-connect', function () {
-            return new StripeConnect;
+        $this->app->singleton('laravel-financier', function () {
+            return new LaravelFinancier;
         });
     }
 }

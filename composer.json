@@ -1,11 +1,10 @@
 {
-    "name": "sifex/stripe-connect",
-    "description": "A Laravel Stripe Connect Library",
+    "name": "sifex/laravel-financier",
+    "description": "A Laravel library for Financier – an interface for platform-based payment gateways such as Stripe Connect.",
     "keywords": [
-        "sifex",
-        "stripe-connect"
+        "laravel-financier", "financier", "stripe", "connect", "stripe-connect", "payment-gateway", "marketplace"
     ],
-    "homepage": "https://github.com/sifex/stripe-connect",
+    "homepage": "https://github.com/sifex/laravel-financier",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -26,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Sifex\\StripeConnect\\": "src"
+            "Sifex\\LaravelFinancier\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sifex\\StripeConnect\\Tests\\": "tests"
+            "Sifex\\LaravelFinancier\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sifex\\StripeConnect\\StripeConnectServiceProvider"
+                "Sifex\\LaravelFinancier\\LaravelFinancierServiceProvider"
             ],
             "aliases": {
-                "StripeConnect": "Sifex\\StripeConnect\\StripeConnectFacade"
+                "LaravelFinancier": "Sifex\\LaravelFinancier\\LaravelFinancierFacade"
             }
         }
     }

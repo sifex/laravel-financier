@@ -1,8 +1,8 @@
 <?php
 
-namespace Sifex\StripeConnect;
+namespace Sifex\LaravelFinancier;
 
-class StripeConnect
+class LaravelFinancier
 {
     // Build your next great package.
 }

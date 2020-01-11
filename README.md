@@ -1,18 +1,18 @@
-# Laravel Stripe Connect
+# Laravel Financier
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sifex/stripe-connect.svg?style=flat-square)](https://packagist.org/packages/sifex/stripe-connect)
-[![Build Status](https://img.shields.io/travis/sifex/stripe-connect/master.svg?style=flat-square)](https://travis-ci.org/sifex/stripe-connect)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sifex/stripe-connect.svg?style=flat-square)](https://scrutinizer-ci.com/g/sifex/stripe-connect)
-[![Total Downloads](https://img.shields.io/packagist/dt/sifex/stripe-connect.svg?style=flat-square)](https://packagist.org/packages/sifex/stripe-connect)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sifex/laravel-financier.svg?style=flat-square)](https://packagist.org/packages/sifex/laravel-financier)
+[![Build Status](https://img.shields.io/travis/sifex/laravel-financier/master.svg?style=flat-square)](https://travis-ci.org/sifex/laravel-financier)
+[![Quality Score](https://img.shields.io/scrutinizer/g/sifex/laravel-financier.svg?style=flat-square)](https://scrutinizer-ci.com/g/sifex/laravel-financier)
+[![Total Downloads](https://img.shields.io/packagist/dt/sifex/laravel-financier.svg?style=flat-square)](https://packagist.org/packages/sifex/laravel-financier)
 
-This is a library to help run Stripe Connect from within Laravel. Currently a work in progress.
+This is a Laravel library for [Financier](https://github.com/sifex/financier) – an interface for platform-based payment gateways such as Stripe Connect.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require sifex/stripe-connect
+composer require sifex/laravel-financier
 ```
 
 ## Usage

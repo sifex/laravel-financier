@@ -1,6 +1,6 @@
 <?php
 
-namespace Sifex\StripeConnect\Tests;
+namespace Sifex\LaravelFinancier\Tests;
 
 use PHPUnit\Framework\TestCase;
 

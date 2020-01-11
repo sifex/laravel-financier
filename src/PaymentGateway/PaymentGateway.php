@@ -1,10 +1,10 @@
 <?php
 
-namespace Sifex\StripeConnect\PaymentGateway;
+namespace Sifex\LaravelFinancier\PaymentGateway;
 
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Collection;
-use Sifex\StripeConnect\Interfaces\ConnectAccount;
+use Sifex\LaravelFinancier\Interfaces\ConnectAccount;
 
 
 interface PaymentGateway
